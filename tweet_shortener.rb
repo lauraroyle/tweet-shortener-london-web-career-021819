@@ -23,10 +23,11 @@ def word_substituter(tweet)
     if dictionary.keys.include?(word.downcase)
       #if hash.keys include the tweet word (downcase is needed for the bulk shortner)
       word = dictionary[word.downcase]
+      #replaces the word with the hash subsitute
     else
-      word
+      word #if not, leave word as it is
     end
-  end.join(" ")
+  end.join(" ") #join back into a string
   #???
 end
 
