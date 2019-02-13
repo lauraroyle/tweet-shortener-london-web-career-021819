@@ -1,3 +1,5 @@
+require 'pry'
+
 def dictionary
   dictionary = {
     "hello" => "hi",
@@ -15,12 +17,16 @@ end
 
 def word_substituter(tweet)
   tweet.split.map do |word|
+    #split converts the tweet into an array
+    #map iterates over that new array and manipulates the original array
+    #word is placeholder for each word of the tweet (which is now an array)
     if dictionary.keys.include?(word.downcase)
       word = dictionary[word.downcase]
     else
       word
     end
   end.join(" ")
+  #??? 
 end
 
 def bulk_tweet_shortener(tweets)
