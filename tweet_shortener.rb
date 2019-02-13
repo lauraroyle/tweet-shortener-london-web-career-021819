@@ -20,13 +20,14 @@ def word_substituter(tweet)
     #split converts the tweet into an array
     #map iterates over that new array and manipulates the original array
     #word is placeholder for each word of the tweet (which is now an array)
-    if dictionary.keys.include?(word.downcase)
-      word = dictionary[word.downcase]
+    if dictionary.keys.include?(word)
+      #if hash.keys include the tweet word
+      word = dictionary[word]
     else
       word
     end
   end.join(" ")
-  #??? 
+  #???
 end
 
 def bulk_tweet_shortener(tweets)
