@@ -21,7 +21,7 @@ def word_substituter(tweet)
     #map iterates over that new array and manipulates the original array
     #word is placeholder for each word of the tweet (which is now an array)
     if dictionary.keys.include?(word.downcase)
-      #if hash.keys include the tweet word
+      #if hash.keys include the tweet word (downcase is needed for the bulk shortner)
       word = dictionary[word.downcase]
     else
       word
