@@ -1,3 +1,5 @@
+require 'pry'
+
 def dictionary
   dictionary = {
     "hello" => "hi",
@@ -15,12 +17,18 @@ end
 
 def word_substituter(tweet)
   tweet.split.map do |word|
+    #split converts the tweet into an array
+    #map iterates over that new array and manipulates the original array
+    #word is placeholder for each word of the tweet (which is now an array)
     if dictionary.keys.include?(word.downcase)
+      #if hash.keys include the tweet word (downcase is needed for the bulk shortner)
       word = dictionary[word.downcase]
+      #replaces the word with the hash subsitute
     else
-      word
+      word #if not, leave word as it is
     end
-  end.join(" ")
+  end.join(" ") #join back into a string
+  #???
 end
 
 def bulk_tweet_shortener(tweets)
